@@ -19,4 +19,12 @@ public class GoogleTest {
                 .shouldBe(visible)
                 .shouldHave(text("ВКонтакте: Добро пожаловать"));
     }
+
+    @Test
+    void searchSelenideInYandex() {
+        open("https://yandex.ru/");
+        $("#text").val("selenide").pressEnter();
+        $("li.serp-item div a.link").shouldHave(text("selenide"));
+    }
+
 }
