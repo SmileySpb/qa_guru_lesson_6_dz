@@ -26,5 +26,4 @@ public class GoogleTest {
         $("#text").val("selenide").pressEnter();
         $("li.serp-item div a.link").shouldHave(text("selenide"));
     }
-
 }
